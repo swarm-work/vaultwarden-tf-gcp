@@ -1,0 +1,27 @@
+# Global
+
+project_id = "sw-tools-vaultwarden"
+region = "us-central1"
+zone = "us-central1-a"
+name = "vaultwarden-server"
+
+# Compute Instance
+
+machine_type = "e2-micro"
+instance_stop_on_update = true
+instance_desired_status = "RUNNING"
+instance_deletion_protection = true
+instance_tags = ["http-server", "https-server"]
+instace_auto_delete_disk = false
+
+# Disk
+
+disk_type = "pd-standard"
+disk_size = 10
+disk_image = "debian-cloud/debian-9"
+
+# Snapshot
+
+snapshot_daily_schedule = "04:00"
+snapshot_retention_days = 7
+snapshot_on_disk_delete = "KEEP_AUTO_SNAPSHOTS"
